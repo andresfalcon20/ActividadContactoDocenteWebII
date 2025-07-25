@@ -1,0 +1,30 @@
+<h2 class="titulo">Galería de Productos</h2>
+
+<div class="edad-check">
+  <h2 class="titulo">Dessea ver los productos ? </h2>
+  <button (click)="verificarEdad(true)">Si</button>
+  <button (click)="verificarEdad(false)">No</button>
+</div>
+
+<div class="tabla-contenedor" *ngIf="esMayorDeEdad">
+  <table class="tabla-productos">
+    <thead>
+      <tr>
+        <th>Imagen</th>          
+        <th>Nombre</th>
+        <th>Descripción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let producto of productosFiltrados">
+        <td>
+          <img [src]="producto.imagenUrl" alt="{{ producto.nombre }}" class="imagen-producto" />
+        </td>
+        <td>{{ producto.nombre }}</td>
+        <td>{{ producto.descripcion }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+

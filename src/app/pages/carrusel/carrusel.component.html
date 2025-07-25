@@ -1,0 +1,12 @@
+<div class="flex flex-col items-center justify-center min-h-screen bg-white">
+  <div class="carrusel text-center">
+    
+    <img [src]="imagenes[imagen]" alt="Imagen carrusel" class="imagen-carrusel" />
+
+    <div class="botones-carrusel">
+      <button (click)="anterior()">Anterior</button>
+      <button (click)="siguiente()">Siguiente</button>
+    </div>
+    
+  </div>
+</div>

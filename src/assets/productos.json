@@ -1,0 +1,28 @@
+[
+  {
+    "id": 1,
+    "nombre": "Laptop Gamer",
+    "descripcion": "Potente laptop con tarjeta gráfica dedicada.",
+     "imagenUrl": "https://media.tenor.com/pZOmAw7zXQkAAAAM/nag-lalaro-klager.gif",
+    "edadMinima": 18
+
+  },
+  {
+        "id": 2,
+
+    "nombre": "Smartphone Pro",
+    "descripcion": "Teléfono con cámara de alta resolución.",
+        "imagenUrl": "https://cdna.artstation.com/p/assets/images/images/046/647/560/original/veil-cg-iphone-12pro-gif-1.gif?1645620357",
+    "edadMinima": 0
+
+  },
+  {
+        "id": 3,
+
+    "nombre": "Audífonos Inalámbricos",
+    "descripcion": "Cancelación de ruido y batería duradera.",
+    "imagenUrl": "https://i.blogs.es/51f616/x10-1/450_1000.gif",
+    "edadMinima": 0
+
+  }
+]
