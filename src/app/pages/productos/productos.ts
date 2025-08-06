@@ -1,9 +1,9 @@
-export interface Producto{
-        id: number;
-    nombre:string,
-    descripcion:string,
-    imagenUrl: string
-  edadMinima: number; 
+    export interface Producto{
+            id: number;
+        nombre:string,
+        descripcion:string,
+        imagenUrl: string
+    edadMinima: number; 
 
 
-}   
+    }   
