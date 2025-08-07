@@ -10,31 +10,35 @@ import { Usuario } from '../pages/login/usuario';
 })
 export class AutenticacionService {
 
-    
-constructor(private http: HttpClient) { }
+private apiUrl = 'http://localhost:3000/usuarios';
 
-private apiUrl = 'http://localhost:3000'; 
+  constructor(private http: HttpClient) {}
 
-
-  private usuarioValido= {
-    usuario: 'admin',
-    password: 'admin123'
+  
+  addUser(user: Usuario): Observable<Usuario> {
+    return this.http.post<Usuario>(this.apiUrl, user);
   }
 
-  sesionIniciada = () => {
-    return localStorage.getItem('user') !== null;
-    }
+  
+  getUsers(): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(this.apiUrl);
+  }
 
-    logout = () => {
-      localStorage.removeItem('user');
-    }
+  
+  getUserByEmail(email: string): Observable<Usuario[]> {
+    return this.http.get<Usuario[]>(`${this.apiUrl}email=${email}`);
+  }
 
-    login(email: string, password: string): Observable<boolean> {
-  return this.http.get<Usuario[]>(`${this.apiUrl}/usuarios`).pipe(
-    map(usuarios => {
-      const usuarioValido = usuarios.find(u => u.email === email && u.password === password);
-      if (usuarioValido) {
-        localStorage.setItem('usuario', JSON.stringify(usuarioValido));
+
+
+
+  
+ login(usuario: string, password: string): Observable<boolean> {
+  return this.getUserByEmail(usuario).pipe(
+    map((usuarios: Usuario[]) => {
+      const userEncontrado = usuarios.find(user => user.password === password);
+      if (userEncontrado) {
+        localStorage.setItem('user', usuario);
         return true;
       }
       return false;
@@ -43,4 +47,17 @@ private apiUrl = 'http://localhost:3000';
 }
 
 
+  sesionIniciada = ()=>{
+    return localStorage.getItem('user') !==null;
+
+  }
+
+  logout=()=>{
+    localStorage.removeItem('user');
+  }
+
+    
 }
+
+
+

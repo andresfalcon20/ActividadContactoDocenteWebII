@@ -1,13 +1,12 @@
 <div class="pantalla">
 <div class="container">
     <input type="checkbox" id="signup_toggle">
-    <form class="form">
+    <form (ngSubmit)="registrarUsuario()" #form="ngForm" class="form">
         <div class="form_front">
             <div class="form_details">Registro</div>
-            <input placeholder="Nombre de Usuario" class="input" type="text">
-            <input placeholder="Correo Electronico" class="input" type="text">
-            <input placeholder="Correo Electronico" class="input" type="text">
-            <input placeholder="Correo Electronico" class="input" type="text">
+            <input [(ngModel)]="nombre" name="nombre" placeholder="Nombre de Usuario" class="input" type="text">
+            <input [(ngModel)]="email" name="email" placeholder="Correo Electronico" class="input" type="text">
+            <input [(ngModel)]="password" name="password" placeholder="Password" class="input" type="text">
             <button class="btn">Registrate</button>
                 
         </div>
