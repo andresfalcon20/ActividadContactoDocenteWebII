@@ -1,6 +1,6 @@
 
 .pantalla {
-  background-image: url('https://e0.pxfuel.com/wallpapers/951/141/desktop-wallpaper-technology-black-and-red-technological.jpg');
+  background-image: url('https://img.freepik.com/vector-gratis/fondo-tecnologico-color-negro-degradado_23-2149209060.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -13,12 +13,12 @@
 }
 
 
-/* From Uiverse.io by AmIt-DasIT */ 
 .container {
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: #000000;
+  margin-bottom: 150px;
 }
 
 .form {
@@ -37,7 +37,7 @@
   gap: 20px;
   position: absolute;
   backface-visibility: hidden;
-  padding: 65px 45px;
+  padding: 40px 40px;
   border-radius: 15px;
   box-shadow: inset 2px 2px 10px rgba(0,0,0,1),
   inset -1px -1px 5px rgba(255, 255, 255, 0.6);
@@ -66,13 +66,13 @@
 }
 
 .input {
-  width: 245px;
-  min-height: 45px;
+  width: 300px;
+  min-height: 40px;
   color: #fff;
   outline: none;
   transition: 0.35s;
   padding: 0px 7px;
-  background-color: #000000;
+  background-color: transparent;
   border-radius: 6px;
   border: 2px solid #212121;
   box-shadow: 6px 6px 10px rgba(0,0,0,1),
@@ -99,7 +99,7 @@
 .btn {
   padding: 10px 35px;
   cursor: pointer;
-  background-color: #212121;
+  background-color: #535353;
   border-radius: 6px;
   border: 2px solid #212121;
   box-shadow: 6px 6px 10px rgba(0,0,0,1),
