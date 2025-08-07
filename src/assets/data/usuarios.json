@@ -1,5 +1,10 @@
 {
-    "usuarios":[
-        
-    ]
+  "usuarios": [
+    { "id": 1, "email": "admin@technova.com", "password": "123456" },
+    { "id": 2, "email": "andres@web.com", "password": "webdev" }
+  ],
+  "productos": [
+    { "id": 1, "nombre": "Laptop", "precio": 1200 },
+    { "id": 2, "nombre": "Smartphone", "precio": 800 }
+  ]
 }

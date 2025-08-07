@@ -27,3 +27,5 @@ export const autenticaGuard: CanActivateFn = (route, state) => {
 
 
 };
+
+
